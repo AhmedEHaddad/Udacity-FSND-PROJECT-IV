@@ -236,8 +236,26 @@ def deleteItem(category_id, item_id):
 #########################################
 #########################################
 #JSON API Endpoints
+# JSON APIs to view App Information
 #########################################
+@app.route('/category/<int:category_id>/items/JSON')
+def categoryItemsJSON(category_id):
+    category = session.query(Category).filter_by(id=category_id).one()
+    items = session.query(Item).filter_by(
+        category_id=category_id).all()
+    return jsonify(items=[i.serialize for i in items])
 
+
+@app.route('/category/<int:category_id>/items/<int:item_id>/JSON')
+def itemJSON(category_id, item_id):
+    item = session.query(Item).filter_by(id=item_id).one()
+    return jsonify(item=item.serialize)
+
+
+@app.route('/category/JSON')
+def categoriesJSON():
+    categories = session.query(Category).all()
+    return jsonify(categories=[c.serialize for c in categories])
 
 
 #########################################
