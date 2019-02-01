@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -35,6 +35,7 @@ class Item(Base):
 
     name = Column(String(80), nullable=False)
     id = Column(Integer, primary_key=True)
+    date = Column(DateTime, nullable=False)
     description = Column(String(250))
     price = Column(String(8))
     type = Column(String(25))
@@ -56,6 +57,7 @@ class Item(Base):
             'type' : self.type,
             'model': self.model,
             'manufacturer': self.manufacturer,
+            'category': self.category.name,
         }
 
 

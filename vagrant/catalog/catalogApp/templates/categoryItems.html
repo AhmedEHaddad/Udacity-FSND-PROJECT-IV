@@ -1,7 +1,30 @@
 <html>
 <head>
+  <title>{{category.name}}'s list</title>
 </head>
 <body>
-<p>Welcome to Electro portal WebApp!</p>
+  <!--------->
+  {% include "header.html" %}
+  <!--------->
+
+  <h2>Welcome to Electro portal WebApp!</h2>
+
+  <!--------->
+  {% include "flash.html" %}
+  <!--------->
+
+  <h3>These are the items available in {{category.name}} <a href="{{url_for('editCategory', category_id=category.id)}}">Edit</a> <a href="{{url_for('deleteCategory', category_id=category.id)}}">Delete</a>
+    </h3>
+    <a style="font-size:12px; color:darkorange;" href = "{{url_for('newItem', category_id = category.id)}}">Add a new item!</a>
+    </br>
+    </br>
+  <div>
+    {% for item in items %}
+      <a href = "{{url_for('showItem', category_id = category.id, item_id=item.id)}}">
+            {{item.name}}
+          </br>
+      </a>
+   {% endfor %}
+  </div>
 </body>
 </html>

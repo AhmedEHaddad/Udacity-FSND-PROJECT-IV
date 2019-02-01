@@ -2,6 +2,47 @@
 <head>
 </head>
 <body>
-<p>Welcome to Electro portal WebApp!</p>
+  <!--------->
+  {% include "header.html" %}
+  <!--------->
+  <p>Welcome to Electro portal WebApp!</p>
+
+  <div>
+        <h1>Add Item</h1>
+
+        <form action="{{url_for('newItem', category_id=category_id)}}" method = "post">
+            <div>
+                <label for="name">Name:</label>
+                <input type ="text" placeholder="name" maxlength="250" name="name">
+            </div>
+            <div>
+                <label for="price">price:</label>
+                <input type ="text" placeholder="price" maxlength="8" name = "price">
+            </div>
+            <div>
+                <label for="type">Type:</label>
+                <input type ="text" placeholder="type" maxlength="250" name="type">
+            </div>
+            <div>
+                <label for="model">Model:</label>
+                <input type ="text" placeholder="model" maxlength="250" name="model">
+            </div>
+            <div>
+                <label for="manufacturer">Manufacturer:</label>
+                <input type ="text" placeholder="manufacturer" maxlength="250" name="manufacturer">
+            </div>
+            <div >
+                <label for="description">Description:</label>
+                <textarea name="description" placeholder="description" maxlength="250" cols="30" rows="3"></textarea>
+            </div>
+            <div>
+                <button type="submit" >create</button>
+                <a href="{{url_for('showItems', category_id=category_id)}}">
+                    <button type="button" >Cancel</button>
+                </a>
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>

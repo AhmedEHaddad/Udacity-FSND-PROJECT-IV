@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+  <!--------->
+  {% include "header.html" %}
+  <!--------->
+  <p strong>{{item.name}}</p>
+  <p>Type:{{item.type}}, Manufacturer:{{item.manufacturer}}, Model:{{item.model}}, Price:${{item.price}}</p>
+  <p>Description: {{item.description}}</p>
+  <p>Last Updated: {{item.date}}</p>
+  <div>
+    <p>
+      <a href="{{url_for('editItem', category_id=category_id, item_id=item.id)}}">
+        Edit
+      </a>
+      <a href="{{url_for('deleteItem', category_id=category_id, item_id=item.id)}}">
+         Delete
+      </a>
+    </p>
+  </div>
+</body
+</html>

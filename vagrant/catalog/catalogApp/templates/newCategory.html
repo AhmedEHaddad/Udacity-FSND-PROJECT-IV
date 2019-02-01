@@ -2,6 +2,16 @@
 <head>
 </head>
 <body>
-<p>Welcome to Electro portal WebApp!</p>
+  <!--------->
+  {% include "header.html" %}
+  <!--------->
+  <p>Welcome to Electro portal WebApp!</p>
+  <h5> create a new category:</h5>
+  <div>
+    <form action="{{url_for('newCategory')}}" method = 'POST'>
+      <input type='text' size='30' name='name' placeholder="Category's name">
+      <input type='submit' value='Create'>
+    </form>
+  </div>
 </body>
 </html>
