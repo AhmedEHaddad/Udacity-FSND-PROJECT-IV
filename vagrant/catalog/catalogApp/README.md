@@ -33,4 +33,4 @@ An application that is developed in order to provide a list of items within a va
 * [Intergrating Google Sign In](https://developers.google.com/identity/sign-in/web/sign-in)
 * [Google Sign Out](https://developers.google.com/identity/sign-in/web/sign-in#sign_out_a_user)
 * Udacity's Example Menu Application
-* some GitHub repo's: .
+* some GitHub repo's: [1](https://github.com/LeandriB/item_catalog).
