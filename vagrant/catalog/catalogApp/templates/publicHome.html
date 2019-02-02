@@ -45,9 +45,8 @@
 <body>
   <div class = "header"  style="background-color:; align:left;" >
     <h1>Hello There! ようこそ!</h1>
-    <h2>Welcome to Electro portal WebApp!</h2>
-    <!--<a style="color:MediumSpringGreen;" href="/login" id="login" >Login</a>-->
-    <a style="color:MediumSpringGreen;" href="/gdisconnect" id="logout" >Login</a>
+    <h2>Welcome to Electro portal WebApp! public user!!</h2>
+    <a style="color:MediumSpringGreen;" href="/login" id="login" >Login</a>
     <div class="flashing">
       <!--MESSAGE FLASHING EXAMPLE -->
       {% with messages = get_flashed_messages() %}
@@ -65,7 +64,7 @@
     <div class="column left" style="background-color:MediumVioletRed;">
       <h2>Column 1</h2>
       <h2 style="box-sizing: none;">Categories</h2>
-      <a style="font-size:12px; color:darkorange; box-sizing: none;" href = "{{url_for('newCategory')}}">Add a new category</a>
+      
       <p>Some text..</p>
       {% for category in categories %}
 		    <a href = "{{url_for('showItems', category_id = category.id)}}">

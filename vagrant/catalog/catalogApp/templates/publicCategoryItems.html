@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>{{category.name}}'s list</title>
+</head>
+<body>
+  <!--------->
+  {% include "header.html" %}
+  <!--------->
+
+  <h2>Welcome to Electro portal WebApp! public user!!</h2>
+
+  <!--------->
+  {% include "flash.html" %}
+  <!--------->
+
+  <h3>These are the items available in {{category.name}}
+    </h3>
+
+    </br>
+    </br>
+  <div>
+    {% for item in items %}
+      <a href = "{{url_for('showItem', category_id = category.id, item_id=item.id)}}">
+            {{item.name}}
+          </br>
+      </a>
+   {% endfor %}
+  </div>
+</body>
+</html>
