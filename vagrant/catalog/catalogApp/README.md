@@ -1,4 +1,4 @@
-#Udacity-FSND-PROJECT-IV
+# Udacity-FSND-PROJECT-IV
 # Item Catalog Project
 
 Udacity: Full Stack Web Development Nanodegree
@@ -7,27 +7,29 @@ Udacity: Full Stack Web Development Nanodegree
 
 An application that is developed in order to provide a list of items within a variety of categories. This application also provides a user registration and authentication system, that allows registered users to have the ability to Create, Read, Update and Delete their own items.
 
-## What you'll need:
+## What you'll need (Pre-requisites):
 
 1. Install [Vagrant](https://www.vagrantup.com/)
 2. Install [VirtualBox](https://www.virtualbox.org/)
-3. Go to [Udacity's Github](https://github.com/udacity/fullstack-nanodegree-vm) and clone or download it.
+3. Go to [Udacity's Github](https://github.com/udacity/fullstack-nanodegree-vm) and clone or download it (contains all dependencies and libraries needed).
 4. Add content of this [repository](https://github.com/AhmedEHaddad/Udacity-FSND-PROJECT-IV/tree/master/vagrant/catalog/catalogApp)
 
-## How to run application:
+## How to run:
 
-1. Launch the Virtual Machine using the command:
+* clone this [repo](https://github.com/AhmedEHaddad/Udacity-FSND-PROJECT-IV/tree/master/vagrant/catalog/catalogApp) inside the `/vagrant/catalog` from this [Udacity's Repo](https://github.com/udacity/fullstack-nanodegree-vm)
+
+* Launch the Virtual Machine using the command:
 ```
     $ vagrant up
 ```
-2. Run the application inside the Virtual Machine:
+* Run the application inside the Virtual Machine:
 ```
     $ python /vagrant/catalog/catalogApp/app.py
 ```
-3. Access application by opening [http://localhost:5000](http://localhost:5000).
+* Access application by opening [http://localhost:5000](http://localhost:5000).
 
 ## License
-
+MIT
 ## Resources
 
 * [Intergrating Google Sign In](https://developers.google.com/identity/sign-in/web/sign-in)
