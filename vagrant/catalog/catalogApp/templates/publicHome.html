@@ -62,10 +62,10 @@
   </div>
   <div class = "row">
     <div class="column left" style="background-color:MediumVioletRed;">
-      <h2>Column 1</h2>
+
       <h2 style="box-sizing: none;">Categories</h2>
-      
-      <p>Some text..</p>
+
+      <p style="font-size:12px;">available categories</p>
       {% for category in categories %}
 		    <a href = "{{url_for('showItems', category_id = category.id)}}">
 				      <h3>{{category.name}}</h3>
@@ -76,9 +76,9 @@
 
     </div>
     <div class="column right" style="background-color:PaleVioletRed;">
-      <h2>Column 2</h2>
+
       <h2>Latest addittions</h2>
-      <p>Some text..</p>
+      <p>Here are our latest addittions..</p>
       <div>
         {% for item in items %}
           <div>
