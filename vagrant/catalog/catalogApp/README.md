@@ -18,7 +18,7 @@ An application that is developed in order to provide a list of items within a va
 
 * clone this [repo](https://github.com/AhmedEHaddad/Udacity-FSND-PROJECT-IV/tree/master/vagrant/catalog/catalogApp) inside the `/vagrant/catalog` from this [Udacity's Repo](https://github.com/udacity/fullstack-nanodegree-vm)
 
-* Launch the Virtual Machine using the command:
+* Launch the Virtual Machine using the command(from Udacity's repo vagrant folder):
 ```
     $ vagrant up
 ```
