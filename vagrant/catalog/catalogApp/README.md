@@ -28,6 +28,12 @@ An application that is developed in order to provide a list of items within a va
 ```
 * Access application by opening [http://localhost:5000](http://localhost:5000).
 
+## API Endpoints
+* JSON API Endpoint are available as follows:
+  * all available categories info are available at `/category/JSON`
+  * a certain category's items info are available `/category/<int:category_id>/items/JSON`
+  * a certain item info is available at `/category/<int:category_id>/items/<int:item_id>/JSON`  
+
 ## License
 MIT
 ## Resources
